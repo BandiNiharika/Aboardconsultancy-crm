@@ -269,11 +269,13 @@ body {
   font-size: 28px;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
-  .crm-layout {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
+  .top-navbar {
+    font-size: 16px;
+    text-align: center;
+    padding: 14px;
+    width: 100%;
   }
 
   .dashboard-layout {
@@ -283,47 +285,65 @@ body {
   }
 
   .sidebar {
-    width: 75px;
-    min-width: 75px;
+    width: 70px;
+    min-width: 70px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     overflow-y: auto;
-    padding-top: 70px;
-  }
-
-  .sidebar button {
-    width: 100%;
-    font-size: 12px;
-    padding: 10px 4px;
-    text-align: center;
+    padding-top: 60px;
+    z-index: 999;
   }
 
   .sidebar-logo {
-    width: 45px;
+    width: 40px;
     margin: 10px auto;
     display: block;
   }
 
+  .sidebar button {
+    width: 100%;
+    font-size: 11px;
+    padding: 10px 4px;
+    margin-bottom: 6px;
+  }
+
   .main-content {
-    margin-left: 75px;
-    width: calc(100% - 75px);
-    padding: 12px;
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 10px;
   }
 
   .dashboard-cards {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+
+  textarea,
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   table {
     display: block;
+    width: 100%;
     overflow-x: auto;
     white-space: nowrap;
   }
 
-  .top-navbar {
-    font-size: 14px;
-    padding: 12px;
+  .popup-box {
+    min-width: 90% !important;
+    width: 90%;
+    padding: 20px !important;
   }
 }
