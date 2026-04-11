@@ -10,7 +10,7 @@ function App() {
   const today = new Date().toISOString().split("T")[0];
 
   const [screen, setScreen] = useState(
-  localStorage.getItem("crmScreen") || "welcome"
+  sessionStorage.getItem("crmScreen") || "welcome"
 );
   const [loginData, setLoginData] = useState({
     username: "",
@@ -55,7 +55,7 @@ useEffect(() => {
 }, [dailyNote]);
 
 useEffect(() => {
-  localStorage.setItem("crmScreen", screen);
+  sessionStorage.setItem("crmScreen", screen);
 }, [screen]);
 
   const todayFollowups = studentLeads.filter(
