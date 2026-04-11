@@ -79,20 +79,23 @@ export default function StudentBoard({
   };
 
   const saveLead = () => {
-    if (!formData.name || !formData.phone) return;
+  if (!formData.name || !formData.phone) return;
 
-    if (editingId) {
-      setStudentLeads((prev) =>
-        prev.map((lead) =>
-          lead.id === editingId ? { ...formData, id: editingId } : lead
-        )
-      );
-    } else {
-      setStudentLeads([...studentLeads, { ...formData, id: Date.now() }]);
-    }
+  if (editingId) {
+    setStudentLeads((prev) =>
+      prev.map((lead) =>
+        lead.id === editingId ? { ...formData, id: editingId } : lead
+      )
+    );
+  } else {
+    setStudentLeads((prev) => [
+      ...prev,
+      { ...formData, id: Date.now() }
+    ]);
+  }
 
-    resetForm();
-  };
+  resetForm();
+};
 
   const deleteLead = (id) => {
     setStudentLeads((prev) => prev.filter((lead) => lead.id !== id));
