@@ -309,26 +309,28 @@ body {
     margin-bottom: 6px;
   }
 
-  .main-content {
-    margin-left: 70px;
-    width: calc(100% - 70px);
-    padding: 10px;
-  }
-
-  .dashboard-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
+ .main-content {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  padding: 10px;
+  overflow-x: hidden;
 }
 
+ .dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+} 
 .card {
   width: 100%;
-  min-width: 0;
-  padding: 14px;
+  padding: 12px;
   box-sizing: border-box;
-  overflow-wrap: break-word;
+  margin: 0;
 }
+
+
 
   textarea,
   input,
