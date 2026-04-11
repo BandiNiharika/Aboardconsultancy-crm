@@ -9,7 +9,9 @@ import "./App.css";
 function App() {
   const today = new Date().toISOString().split("T")[0];
 
-  const [screen, setScreen] = useState("welcome"); // welcome | login | dashboard
+  const [screen, setScreen] = useState(
+  localStorage.getItem("crmScreen") || "welcome"
+); 
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -51,6 +53,10 @@ useEffect(() => {
 useEffect(() => {
   localStorage.setItem("dailyNote", dailyNote);
 }, [dailyNote]);
+
+useEffect(() => {
+  localStorage.setItem("crmScreen", screen);
+}, [screen]);
 
   const todayFollowups = studentLeads.filter(
     (lead) => lead.followupDate === today
