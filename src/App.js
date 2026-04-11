@@ -11,7 +11,7 @@ function App() {
 
   const [screen, setScreen] = useState(
   localStorage.getItem("crmScreen") || "welcome"
-); 
+);
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
