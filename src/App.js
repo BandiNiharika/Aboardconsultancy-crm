@@ -203,7 +203,7 @@ useEffect(() => {
     <div className="crm-layout">
       
       <header className="top-navbar">
-  <h2 className="crm-title">🌟 Red Star Immigration Services CRM</h2>
+  <h2 className="crm-title">🌟 Abroad Consultancy Name CRM</h2>
 
   <button className="logout-btn" onClick={handleLogout}>
     Logout
