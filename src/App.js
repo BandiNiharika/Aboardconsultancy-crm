@@ -85,18 +85,18 @@ useEffect(() => {
     return (
       <div className="welcome-page">
         <img src="/logo192.png" alt="logo" className="welcome-logo" />
-        <h1>Welcome to Red Star Immigration Services</h1>
+        <h1>Welcome to Abroad Consulatncy Name</h1>
         <button onClick={() => setScreen("login")}>Enter Dashboard</button>
       </div>
     );
   }
 
   if (screen === "login") {
-    return (
+    return ( 
       <div
         className="welcome-page"
         style={{
-          background: "linear-gradient(135deg, #397aba 0%, #e2e8f0 100%)",
+          background: "linear-gradient(135deg, #397aba 0%, #dee3eb 100%)",
           minHeight: "100vh",
           display: "flex",
           justifyContent: "center",
