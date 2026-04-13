@@ -96,7 +96,7 @@ useEffect(() => {
       <div
         className="welcome-page"
         style={{
-          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
+          background: "linear-gradient(135deg, #397aba 0%, #e2e8f0 100%)",
           minHeight: "100vh",
           display: "flex",
           justifyContent: "center",
@@ -120,7 +120,7 @@ useEffect(() => {
               style={{ width: "70px", marginBottom: "10px" }}
             />
             <h2 style={{ margin: 0 }}>🔐 CRM Secure Login</h2>
-            <p style={{ color: "#64748b", marginTop: "8px" }}>
+            <p style={{ color: "#1e5eb8", marginTop: "8px" }}>
               Enter your credentials to continue
             </p>
           </div>
@@ -140,7 +140,7 @@ useEffect(() => {
               marginTop: "8px",
               padding: "12px",
               borderRadius: "10px",
-              border: "1px solid #d1d5db",
+              border: "1px solid #2261c0",
             }}
           />
 
@@ -167,7 +167,7 @@ useEffect(() => {
               marginTop: "8px",
               padding: "12px",
               borderRadius: "10px",
-              border: "1px solid #d1d5db",
+              border: "1px solid #3674d0",
             }}
           />
 
@@ -193,16 +193,22 @@ useEffect(() => {
       </div>
     );
   }
+  const handleLogout = () => {
+  sessionStorage.removeItem("crmScreen");
+  setScreen("welcome");
+};
 
   return (
     
     <div className="crm-layout">
       
       <header className="top-navbar">
-        
-        🌟 Consultancy Name CRM
-        
-      </header>
+  <h2 className="crm-title">🌟 Red Star Immigration Services CRM</h2>
+
+  <button className="logout-btn" onClick={handleLogout}>
+    Logout
+  </button>
+</header>
       
       
 
